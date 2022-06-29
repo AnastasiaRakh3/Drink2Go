@@ -74,7 +74,6 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest',
   ], {
     base: 'source'
   })
@@ -91,7 +90,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -126,4 +125,3 @@ export default gulp.series(
   server,
   watcher
 );
-
