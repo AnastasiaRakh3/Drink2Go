@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <!-- Написать заголовок веб-страницы! -->
-  <title>Drink2Go</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Написать шрифты! -->
-  <!-- <link rel="preload" href="fonts/----.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8">
+    <!-- Написать заголовок веб-страницы! -->
+    <title>Drink2Go</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Написать шрифты! -->
+    <!-- <link rel="preload" href="fonts/----.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/----.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/----.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/----.woff" type="font/woff" as="font" crossorigin="anonymous"> -->
-  <!-- Написать фавиконку! -->
-  <link rel="icon" href="favicon.ico"> <!-- 32 -->
-  <!-- <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml"> -->
-  <!-- Написать миниатюрное изображение, представляющее сайт на устройствах с операционной системой (iOS)! -->
-  <!-- <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> -->
-  <!-- Написать манифест! -->
-  <!-- <link rel="manifest" href="manifest.webmanifest"> -->
-</head>
+    <!-- Написать фавиконку! -->
+    <link rel="icon" href="favicon.ico">
+    <!-- 32 -->
+  </head>
 
-<body class="page__body">
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <div class="page-header__logo-wrapper">
+          <a class="header-logo" href="#!"></a>
+          <p class="header-logo-description"></p>
+        </div>
+        <nav class="page-header__nav page-header__nav--nojs">
+          <!-- page-header__nav--nojs класс, который при отсутствии js заблокириет меню в открытом состоянии-->
+          <button class="page-header__nav-toggle" type="button"></button>
+          <ul class="page-header__nav-site site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#!">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#!">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#!">Доставка</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#!">О нас</a>
+            </li>
+          </ul>
+          <ul class="page-header__nav-user user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#!"><span class="user-list__link-text">Войти</span></a>
+              <a class="user-list__link" href="#!"><span class="user-list__link-text">Корзина</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--                                                                       MAIN                                               -->
+    <main class="main"></main>
+    <!--                                                                      FOOTER                                              -->
+    <footer class="page-footer"></footer>
 
-  <header class="page-header">
-  </header>
-  <!--                                                                       MAIN                                               -->
-  <main class="main">
-  </main>
-  <!--                                                                      FOOTER                                              -->
-  <footer class="page-footer">
-  </footer>
-
-  <!-- Написать название js модулей! -->
-  <!-- <script src="js/---.js"></script>
+    <!-- Написать название js модулей! -->
+    <!-- <script src="js/---.js"></script>
   <script src="js/---.js"></script> -->
-</body>
+  </body>
 
 </html>
