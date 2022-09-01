@@ -1,0 +1,15 @@
+.site-list {
+  @include list-reset;
+}
+
+.site-list__item {
+
+}
+
+.site-list__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #333333;
+  text-transform: uppercase;
+}

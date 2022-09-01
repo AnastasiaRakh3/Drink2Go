@@ -3,18 +3,18 @@
 
   <head>
     <meta charset="utf-8">
-    <!-- Написать заголовок веб-страницы! -->
     <title>Drink2Go</title>
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Написать шрифты! -->
-    <!-- <link rel="preload" href="fonts/----.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/----.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/----.woff" type="font/woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/----.woff" type="font/woff" as="font" crossorigin="anonymous"> -->
-    <!-- Написать фавиконку! -->
+    <link rel="preload" href="fonts/montserratregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratsemibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratregular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratmedium.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratsemibold.woff" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
-    <!-- 32 -->
   </head>
 
   <body class="page__body">
@@ -45,6 +45,8 @@
           <ul class="page-header__nav-user user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#!"><span class="user-list__link-text">Войти</span></a>
+            </li>
+            <li class="user-list__item">
               <a class="user-list__link" href="#!"><span class="user-list__link-text">Корзина</span></a>
             </li>
           </ul>
@@ -56,14 +58,14 @@
       <h1 class="visually-hidden">Магазин напитков DrinkToGo</h1>
       <section class="main__promo promo">
         <div class="promo__wrapper container">
-          <h2 class="promo__heading">Новинка</h2>
+          <h2 class="promo__heading">Новинка!</h2>
           <ul class="promo__list">
-            <li class="promo__item">
+            <li class="promo__item promo__item--decaf">
               <div class="promo__img">
                 <picture></picture>
               </div>
               <div class="promo__text">
-                <h3>Декаф Флэт Уайт</h3>
+                <h3 class="promo__item-heading">Декаф Флэт Уайт</h3>
                 <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
                   молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                 <div class="promo__bottom">
@@ -73,12 +75,12 @@
                 </div>
               </div>
             </li>
-            <li class="promo__item">
+            <li class="promo__item promo__item--latte">
               <div class="promo__img">
                 <picture></picture>
               </div>
               <div class="promo__text">
-                <h3>Лавандовый Латте</h3>
+                <h3 class="promo__item-heading">Лавандовый Латте</h3>
                 <p class="promo__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
                   лавандовым
                   сиропом унесёт вас прямо на вершину Радужных гор</p>
@@ -89,12 +91,12 @@
                 </div>
               </div>
             </li>
-            <li class="promo__item">
+            <li class="promo__item promo__item--espresso">
               <div class="promo__img">
                 <picture></picture>
               </div>
               <div class="promo__text">
-                <h3>Тройной Эспрессо</h3>
+                <h3 class="promo__item-heading">Тройной Эспрессо</h3>
                 <p class="promo__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо
                   из
                   Колумбии покажет вам, что такое настоящая бодрость</p>
@@ -282,7 +284,7 @@
               </li>
             </ul>
             <div class="products__pagination pagination">
-              <ul class="pagination__list list">
+              <ul class="pagination__list">
                 <li class="pagination__item pagination__item---back">
                   <a href="pagination__link" href="!#">Назад</a>
                 </li>
@@ -300,11 +302,8 @@
                 </li>
               </ul>
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       <section class="main__map map">
@@ -313,13 +312,13 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.377944007501!2d37.41001223040204!3d55.734561938659134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ee7a0b12aab%3A0x57e1d83cbf7b6894!2z0JzQvtC70L7QtNC-0LPQstCw0YDQtNC10LnRgdC60LDRjyDRg9C7LiwgNDAg0LrQvtGA0L_Rg9GBIDEsINCc0L7RgdC60LLQsCwgMTIxMzUx!5e0!3m2!1sru!2sru!4v1661781382803!5m2!1sru!2sru"
           width="600" height="600" allowfullscreen title="Локация магазина Drink2Go"></iframe>
       </section>
-
-      <footer class="footer">
-        <a class="footer__logo" href="!#">
+      <!--                                                                      FOOTER                                              -->
+      <footer class="page-footer">
+        <a class="page-footer__logo" href="!#">
           <img src="" alt="">
         </a>
-        <p class="footer__note">Интернет-магазин кофейных напитков</p>
-        <ul class="footer__socials socials">
+        <p class="page-footer__note">Интернет-магазин кофейных напитков</p>
+        <ul class="page-footer__socials socials">
           <li class="socials__item">
             <a class="socials__link" href="!#">
               <svg></svg>
@@ -339,7 +338,7 @@
             </a>
           </li>
         </ul>
-        <div class="footer__nav footer-nav">
+        <div class="page-footer__nav footer-nav">
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <section class="footer-nav__part">
             <h3 class="footer-nav__heading">Интернет-магазин</h3>
@@ -404,8 +403,6 @@
         </div>
       </footer>
     </main>
-    <!--                                                                      FOOTER                                              -->
-    <footer class="page-footer"></footer>
 
     <!-- Написать название js модулей! -->
     <!-- <script src="js/---.js"></script>

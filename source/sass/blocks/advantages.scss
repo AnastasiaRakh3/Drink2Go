@@ -1,0 +1,22 @@
+.advantages {
+}
+.advantages__wrapper{}
+.advantages__heading{}
+.advantages__text{
+
+}
+.advantages__list{
+  @include list-reset;
+}
+.advantages__item{
+
+}
+.advantages__item-heading{}
+.advantages__icon{
+  &--speed{}
+  &--comfort{}
+  &--cheerfulness{}
+  &--eco{}
+}
+.advantages_description{}
+

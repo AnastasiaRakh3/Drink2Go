@@ -1,0 +1,13 @@
+.pagination {
+}
+.pagination__list {
+  @include list-reset;
+}
+.pagination__item {
+  &---back {
+  }
+  &---next {
+  }
+}
+.pagination__link {
+}
