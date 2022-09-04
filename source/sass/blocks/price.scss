@@ -4,6 +4,12 @@
   &--min{}
   &--max{}
 }
+
+.price__number {
+  font-weight: 500;
+  line-height: 24px;
+}
+
 .price__range{}
 .price__scale{}
 .price__bar{}

@@ -1,12 +1,42 @@
 .promo__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .promo__heading {
+  position: absolute;
+  top: 310px;
+  left: 50%;
+  margin: 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
   color: #7859cf;
   text-transform: uppercase;
+  transform: translate(-50%, 0);
+
+  @media (min-width: $tablet-width) {
+    top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 180px;
+    left: 735px;
+    transform: none;
+  }
 }
 
 .promo__list {
@@ -25,47 +55,177 @@
   &--espresso {
     background-color: #e5e6e8;
   }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    padding-left: 60px;
+    padding-right: 40px;
+  }
 }
+
 .promo__img {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    order: 10;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    margin-bottom: 0;
+  }
 }
+
+// убрать позже
+.promo__img img {
+  display: block;
+  margin: auto;
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
 .promo__text {
+  @media (min-width: $desktop-width) {
+    padding-top: 170px;
+    padding-left: 30px;
+  }
 }
 
 .promo__item-heading {
   font-weight: 700;
   font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 10px;
   line-height: 48px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+    text-align: start;
+  }
 }
 
 .promo__description {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-size: 14px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    text-align: start;
+  }
 }
 
-.promo__bottom {
+.promo__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 230px;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
 }
 
 .promo__old-price {
+  margin-right: 6px;
   line-height: 32px;
   color: #7859cf;
 }
 
 .promo__new-price {
+  margin-right: 20px;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
 }
 
 .promo__button {
+  padding: 8px 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
   line-height: 24px;
+  text-align: center;
   color: #ffffff;
+  border: none;
   background-color: #7859cf;
 }
 
-.promo__controls {
-}
-.promo__control {
-  &--prev {
+.promo__slider-buttons {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin: auto;
   }
+}
+
+.promo__slider-button {
+  @media (min-width: $desktop-width) {
+    width: 62px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.promo__slider-block {
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 62px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+}
+
+.promo__slider-button--current .promo__slider-block {
+  background-color: #7859cf;
+}
+
+// Придумать как убрать если нет js
+// .promo__controls {
+// }
+
+.promo__control {
+  position: absolute;
+  top: 50%;
+
+  &--prev {
+    transform: translate(-50%, 0);
+  }
+
   &--next {
+    right: 0;
+    transform: translate(-50%, 0);
   }
 }

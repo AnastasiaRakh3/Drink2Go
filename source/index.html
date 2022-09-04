@@ -62,13 +62,13 @@
           <ul class="promo__list">
             <li class="promo__item promo__item--decaf">
               <div class="promo__img">
-                <picture></picture>
+                <img src="https://via.placeholder.com/100x100" alt="">
               </div>
               <div class="promo__text">
                 <h3 class="promo__item-heading">Декаф Флэт Уайт</h3>
                 <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
                   молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-                <div class="promo__bottom">
+                <div class="promo__buy">
                   <del class="promo__old-price">295</del>
                   <span class="promo__new-price">225</span>
                   <button class="promo__button">Заказать</button>
@@ -77,14 +77,14 @@
             </li>
             <li class="promo__item promo__item--latte">
               <div class="promo__img">
-                <picture></picture>
+                <img src="https://via.placeholder.com/100x100" alt="">
               </div>
               <div class="promo__text">
                 <h3 class="promo__item-heading">Лавандовый Латте</h3>
                 <p class="promo__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
                   лавандовым
                   сиропом унесёт вас прямо на вершину Радужных гор</p>
-                <div class="promo__bottom">
+                <div class="promo__buy">
                   <del class="promo__old-price">285</del>
                   <span class="promo__new-price">265</span>
                   <button class="promo__button">Заказать</button>
@@ -93,14 +93,14 @@
             </li>
             <li class="promo__item promo__item--espresso">
               <div class="promo__img">
-                <picture></picture>
+                <img src="https://via.placeholder.com/100x100" alt="">
               </div>
               <div class="promo__text">
                 <h3 class="promo__item-heading">Тройной Эспрессо</h3>
                 <p class="promo__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо
                   из
                   Колумбии покажет вам, что такое настоящая бодрость</p>
-                <div class="promo__bottom">
+                <div class="promo__buy">
                   <del class="promo__old-price">395</del>
                   <span class="promo__new-price">375</span>
                   <button class="promo__button">Заказать</button>
@@ -108,10 +108,22 @@
               </div>
             </li>
           </ul>
-          <div class="promo__controls">
-            <button class="promo__control promo__control--prev" type="button" aria-label="Предыдущий слайд"></button>
-            <button class="promo__control promo__control--next" type="button" aria-label="Следующий слайд"></button>
+          <div class="promo__slider-buttons">
+            <button class="promo__slider-button promo__slider-button--current" type="button" aria-label="Первый слайд">
+              <span class="promo__slider-block"></span>
+            </button>
+            <button class="promo__slider-button" type="button" aria-label="Второй слайд">
+              <span class="promo__slider-block"></span>
+            </button>
+            <button class="promo__slider-button" type="button" aria-label="Третий слайд">
+              <span class="promo__slider-block"></span>
+            </button>
           </div>
+          <!-- Придумать как убрать если нет js -->
+          <!-- <div class="promo__controls"> -->
+          <button class="promo__control promo__control--prev" type="button" aria-label="Предыдущий слайд"></button>
+          <button class="promo__control promo__control--next" type="button" aria-label="Следующий слайд"></button>
+          <!-- </div> -->
         </div>
       </section>
       <section class="main__advantages advantages">
@@ -214,7 +226,14 @@
           </div>
 
           <div class="catalog__products products">
-            <div class="products__sort"></div>
+            <div class="products__sort sort">
+              <form class="sort__form" action="" method="post">
+                <label class="sort__label" for="sorting-products">Сортировка:</label>
+                <select class="sort__field" name="sorting-products" id="sorting-products">
+                  <option value="default">по умолчанию</option>
+                </select>
+              </form>
+            </div>
             <ul class="products__list goods">
               <li class="goods__item">
                 <a class="goods__link" href="!#">
@@ -224,7 +243,7 @@
                 <p class="goods__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="goods__buy">
                   <span class="goods__price">225₽</span>
-                  <button class="goods__btn" type="button" aria-label="Добавить в корзину"></button>
+                  <button class="goods__btn" type="button">В корзину</button>
                 </div>
               </li>
               <li class="goods__item">
@@ -235,7 +254,7 @@
                 <p class="goods__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="goods__buy">
                   <span class="goods__price">225₽</span>
-                  <button class="goods__btn" type="button" aria-label="Добавить в корзину"></button>
+                  <button class="goods__btn" type="button">В корзину</button>
                 </div>
               </li>
               <li class="goods__item">
@@ -246,7 +265,7 @@
                 <p class="goods__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="goods__buy">
                   <span class="goods__price">225₽</span>
-                  <button class="goods__btn" type="button" aria-label="Добавить в корзину"></button>
+                  <button class="goods__btn" type="button">В корзину</button>
                 </div>
               </li>
               <li class="goods__item">
@@ -257,7 +276,7 @@
                 <p class="goods__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="goods__buy">
                   <span class="goods__price">225₽</span>
-                  <button class="goods__btn" type="button" aria-label="Добавить в корзину"></button>
+                  <button class="goods__btn" type="button">В корзину</button>
                 </div>
               </li>
               <li class="goods__item">
@@ -268,7 +287,7 @@
                 <p class="goods__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="goods__buy">
                   <span class="goods__price">225₽</span>
-                  <button class="goods__btn" type="button" aria-label="Добавить в корзину"></button>
+                  <button class="goods__btn" type="button">В корзину</button>
                 </div>
               </li>
               <li class="goods__item">
@@ -279,26 +298,31 @@
                 <p class="goods__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="goods__buy">
                   <span class="goods__price">225₽</span>
-                  <button class="goods__btn" type="button" aria-label="Добавить в корзину"></button>
+                  <button class="goods__btn" type="button">В корзину</button>
                 </div>
               </li>
             </ul>
             <div class="products__pagination pagination">
               <ul class="pagination__list">
+                <a class="pagination__link" href="!#"></a>
                 <li class="pagination__item pagination__item---back">
-                  <a href="pagination__link" href="!#">Назад</a>
+                  <a class="pagination__link" href="!#">
+                    <span class="visually-hidden">Назад</span>
+                  </a>
                 </li>
                 <li class="pagination__item">
-                  <a href="pagination__link" href="!#">1</a>
+                  <a class="pagination__link" href="!#">1</a>
                 </li>
                 <li class="pagination__item">
-                  <a href="pagination__link" href="!#">2</a>
+                  <a class="pagination__link" href="!#">2</a>
                 </li>
                 <li class="pagination__item">
-                  <a href="pagination__link" href="!#">3</a>
+                  <a class="pagination__link" href="!#">3</a>
                 </li>
                 <li class="pagination__item pagination__item---next">
-                  <a href="pagination__link" href="!#">Вперед</a>
+                  <a class="pagination__link" href="!#">
+                    <span class="visually-hidden">Вперед</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -310,7 +334,7 @@
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.377944007501!2d37.41001223040204!3d55.734561938659134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ee7a0b12aab%3A0x57e1d83cbf7b6894!2z0JzQvtC70L7QtNC-0LPQstCw0YDQtNC10LnRgdC60LDRjyDRg9C7LiwgNDAg0LrQvtGA0L_Rg9GBIDEsINCc0L7RgdC60LLQsCwgMTIxMzUx!5e0!3m2!1sru!2sru!4v1661781382803!5m2!1sru!2sru"
-          width="600" height="600" allowfullscreen title="Локация магазина Drink2Go"></iframe>
+          width="320" height="320" allowfullscreen title="Локация магазина Drink2Go"></iframe>
       </section>
       <!--                                                                      FOOTER                                              -->
       <footer class="page-footer">
@@ -385,11 +409,11 @@
               </li>
             </ul>
           </section>
-          <section class="footer-nav__part footer-nav__part--contacts">
+          <section class="footer-nav__part">
             <h3 class="footer-nav__heading">Контакты</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="!#">
+                <a class="footer-nav__link footer-nav__link--contacts" href="!#">
                   Санкт-Петербург, набережная реки Карповки, дом 5
                 </a>
               </li>
