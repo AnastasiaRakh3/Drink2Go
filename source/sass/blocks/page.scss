@@ -1,12 +1,12 @@
 .page {
   height: 100%;
-  background-color: rgba(214, 250, 210, 0.687);
+  background-color: rgb(214, 214, 228);
 }
 
 .page__body {
-  // display: grid;
-  // grid-template-rows: min-content 1fr min-content;
-  // align-content: start;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   min-width: $mobile-width;
   min-height: 100%;
   margin: 0;

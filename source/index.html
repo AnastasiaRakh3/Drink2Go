@@ -19,7 +19,7 @@
 
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper container">
+      <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <a class="header-logo" href="#!"></a>
           <p class="header-logo-description"></p>
@@ -27,7 +27,7 @@
         <p class="page-header__note">Интернет-магазин кофейных напитков</p>
         <nav class="page-header__nav page-header__nav--nojs">
           <!-- page-header__nav--nojs класс, который при отсутствии js заблокириет меню в открытом состоянии-->
-          <button class="page-header__nav-toggle" type="button"></button>
+          <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
           <ul class="page-header__nav-site site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="#!">Главная</a>
@@ -53,6 +53,16 @@
         </nav>
       </div>
     </header>
+    <script>
+      const nav = document.querySelector(".page-header__nav");
+      const navToggle = document.querySelector(".page-header__nav-toggle");
+
+      nav.classList.remove("page-header__nav--nojs");
+
+      navToggle.addEventListener("click", () => {
+        nav.classList.toggle("page-header__nav--opened");
+      });
+    </script>
     <!--                                                                       MAIN                                               -->
     <main class="main">
       <h1 class="visually-hidden">Магазин напитков DrinkToGo</h1>

@@ -2,14 +2,33 @@
   @include list-reset;
 }
 
-.user-list__item {
-
-}
-
 .user-list__link {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(217, 193, 164);
 
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .user-list__link-text {
+  @media (max-width: $only-not-desktop-width) {
+    @include v-h;
+  }
 
+  display: block;
+  padding: 32px 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #333333;
+  text-transform: uppercase;
+  text-align: center;
 }
