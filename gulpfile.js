@@ -37,11 +37,9 @@ const htmlmini = () => {
 //JS
 const scripts = () => {
   return gulp
-    .src(["source/js/*.js", "!source/js/script.min.js"])
+    .src("source/js/*.js")
     .pipe(terser())
-    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
-    .pipe(gulp.dest("source/js"))
     .pipe(browser.stream());
 };
 
@@ -109,7 +107,7 @@ const server = (done) => {
 // Watcher
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch(["source/js/*.js", "!source/js/script.min.js"], gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html").on("change", browser.reload);
 };
 
@@ -118,9 +116,9 @@ export const build = gulp.series(
   clean,
   copy,
   scripts,
-  images,
-  webper,
-  svger,
+  // images,
+  // webper,
+  // svger,
   spriter,
   styles,
   htmlmini
