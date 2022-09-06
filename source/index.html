@@ -53,26 +53,30 @@
         </nav>
       </div>
     </header>
-    <script>
-      const nav = document.querySelector(".page-header__nav");
-      const navToggle = document.querySelector(".page-header__nav-toggle");
-
-      nav.classList.remove("page-header__nav--nojs");
-
-      navToggle.addEventListener("click", () => {
-        nav.classList.toggle("page-header__nav--opened");
-      });
-    </script>
-    <!--                                                                       MAIN                                               -->
+    <!--  MAIN  -->
     <main class="main">
       <h1 class="visually-hidden">Магазин напитков DrinkToGo</h1>
       <section class="main__promo promo">
         <div class="promo__wrapper container">
           <h2 class="promo__heading">Новинка!</h2>
           <ul class="promo__list">
-            <li class="promo__item promo__item--decaf">
-              <div class="promo__img">
-                <img src="https://via.placeholder.com/100x100" alt="">
+            <li class="promo__item promo__item--current promo__item--decaf">
+              <div class="promo__img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/promo/flat-white-desktop.webp 1x, img/promo/flat-white-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/promo/flat-white-tablet.webp 1x, img/promo/flat-white-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/promo/flat-white-mobile.webp 1x, img/promo/flat-white-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1440px)"
+                    srcset="img/promo/flat-white-desktop.png 1x, img/promo/flat-white-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/promo/flat-white-tablet.png 1x, img/promo/flat-white-tablet@2x.png 2x">
+                  <img class="promo__img" src="img/promo/flat-white-mobile.png"
+                    srcset="img/promo/flat-white-mobile@2x.png 2x" alt="Декаф Флэт Уайт">
+                </picture>
               </div>
               <div class="promo__text">
                 <h3 class="promo__item-heading">Декаф Флэт Уайт</h3>
@@ -86,8 +90,22 @@
               </div>
             </li>
             <li class="promo__item promo__item--latte">
-              <div class="promo__img">
-                <img src="https://via.placeholder.com/100x100" alt="">
+              <div class="promo__img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/promo/lavender-latte-desktop.webp 1x, img/promo/lavender-latte-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/promo/lavender-latte-tablet.webp 1x, img/promo/lavender-latte-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/promo/lavender-latte-mobile.webp 1x, img/promo/lavender-latte-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1440px)"
+                    srcset="img/promo/lavender-latte-desktop.png 1x, img/promo/lavender-latte-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/promo/lavender-latte-tablet.png 1x, img/promo/lavender-latte-tablet@2x.png 2x">
+                  <img class="promo__img" src="img/promo/lavender-latte-mobile.png"
+                    srcset="img/promo/lavender-latte-mobile@2x.png 2x" alt="Лавандовый Латте">
+                </picture>
               </div>
               <div class="promo__text">
                 <h3 class="promo__item-heading">Лавандовый Латте</h3>
@@ -102,8 +120,22 @@
               </div>
             </li>
             <li class="promo__item promo__item--espresso">
-              <div class="promo__img">
-                <img src="https://via.placeholder.com/100x100" alt="">
+              <div class="promo__img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/promo/triple-espresso-desktop.webp 1x, img/promo/triple-espresso-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/promo/triple-espresso-tablet.webp 1x, img/promo/triple-espresso-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/promo/triple-espresso-mobile.webp 1x, img/promo/triple-espresso-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1440px)"
+                    srcset="img/promo/triple-espresso-desktop.png 1x, img/promo/triple-espresso-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/promo/triple-espresso-tablet.png 1x, img/promo/triple-espresso-tablet@2x.png 2x">
+                  <img class="promo__img" src="img/promo/triple-espresso-mobile.png"
+                    srcset="img/promo/triple-espresso-mobile@2x.png 2x" alt="Тройной Эспрессо">
+                </picture>
               </div>
               <div class="promo__text">
                 <h3 class="promo__item-heading">Тройной Эспрессо</h3>
@@ -129,7 +161,7 @@
               <span class="promo__slider-block"></span>
             </button>
           </div>
-          <!-- Придумать как убрать если нет js -->
+          <!-- Убрать если нет js -->
           <!-- <div class="promo__controls"> -->
           <button class="promo__control promo__control--prev" type="button" aria-label="Предыдущий слайд"></button>
           <button class="promo__control promo__control--next" type="button" aria-label="Следующий слайд"></button>
@@ -346,7 +378,7 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.377944007501!2d37.41001223040204!3d55.734561938659134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ee7a0b12aab%3A0x57e1d83cbf7b6894!2z0JzQvtC70L7QtNC-0LPQstCw0YDQtNC10LnRgdC60LDRjyDRg9C7LiwgNDAg0LrQvtGA0L_Rg9GBIDEsINCc0L7RgdC60LLQsCwgMTIxMzUx!5e0!3m2!1sru!2sru!4v1661781382803!5m2!1sru!2sru"
           width="320" height="320" allowfullscreen title="Локация магазина Drink2Go"></iframe>
       </section>
-      <!--                                                                      FOOTER                                              -->
+      <!--  FOOTER  -->
       <footer class="page-footer">
         <a class="page-footer__logo" href="!#">
           <img src="" alt="">
@@ -437,10 +469,7 @@
         </div>
       </footer>
     </main>
-
-    <!-- Написать название js модулей! -->
-    <!-- <script src="js/---.js"></script>
-  <script src="js/---.js"></script> -->
+    <script src="js/script.min.js"></script>
   </body>
 
 </html>

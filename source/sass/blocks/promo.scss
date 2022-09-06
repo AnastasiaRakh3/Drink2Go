@@ -44,6 +44,8 @@
 }
 
 .promo__item {
+  display: none;
+
   &--decaf {
     background-color: #f3ebe1;
   }
@@ -56,19 +58,23 @@
     background-color: #e5e6e8;
   }
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
+  &--current {
+    display: block;
 
-  @media (min-width: $desktop-width) {
-    flex-direction: row;
-    padding-left: 60px;
-    padding-right: 40px;
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      padding-left: 60px;
+      padding-right: 40px;
+    }
   }
 }
 
-.promo__img {
+.promo__img-wrapper {
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
@@ -82,7 +88,7 @@
 }
 
 // убрать позже
-.promo__img img {
+.promo__img {
   display: block;
   margin: auto;
   width: 280px;
