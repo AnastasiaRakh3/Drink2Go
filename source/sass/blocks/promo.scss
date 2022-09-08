@@ -2,16 +2,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  // padding-top: 20px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 80px;
+    // padding-top: 80px;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
+    // padding-top: 60px;
     padding-bottom: 60px;
   }
 }
@@ -33,7 +33,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 180px;
+    // top: 180px;
     left: 735px;
     transform: none;
   }
@@ -45,17 +45,26 @@
 
 .promo__item {
   display: none;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
 
   &--decaf {
-    background-color: #f3ebe1;
+    background: linear-gradient(to bottom, #f3ebe1 640px, transparent 188px);
   }
 
   &--latte {
-    background-color: #eae6fc;
+    background: linear-gradient(to bottom, #eae6fc 640px, transparent 188px);
   }
 
   &--espresso {
-    background-color: #e5e6e8;
+    background: linear-gradient(to bottom, #e5e6e8 640px, transparent 188px);
   }
 
   &--current {
@@ -79,6 +88,7 @@
 
   @media (min-width: $tablet-width) {
     order: 10;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -106,6 +116,10 @@
 }
 
 .promo__text {
+  @media (min-width: $tablet-width) {
+    padding: 0 80px;
+  }
+
   @media (min-width: $desktop-width) {
     padding-top: 170px;
     padding-left: 30px;
@@ -151,11 +165,14 @@
 
 .promo__buy {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  min-width: 230px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 230px;
+  margin: 0 auto 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+  }
 
   @media (min-width: $desktop-width) {
     justify-content: start;
@@ -169,13 +186,14 @@
 }
 
 .promo__new-price {
-  margin-right: 20px;
+  margin-right: 6px;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
 }
 
 .promo__button {
+  margin-left: auto;
   padding: 8px 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
@@ -184,6 +202,7 @@
   color: #ffffff;
   border: none;
   background-color: #7859cf;
+  border-radius: 4px;
 }
 
 .promo__slider-buttons {
@@ -218,20 +237,27 @@
   background-color: #7859cf;
 }
 
-// Придумать как убрать если нет js
-// .promo__controls {
-// }
-
 .promo__control {
   position: absolute;
-  top: 50%;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: rgb(247, 161, 146);
+  // background-color: transparent;
 
-  &--prev {
-    transform: translate(-50%, 0);
+  // &--prev {
+  //   transform: translate(-50%, 0);
+  // }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    max-height: 640px;
+
   }
 
   &--next {
     right: 0;
-    transform: translate(-50%, 0);
   }
 }

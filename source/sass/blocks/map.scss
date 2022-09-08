@@ -2,6 +2,10 @@
 }
 
 .map iframe {
+  width: 320px;
+  height: 320px;
+  border: 0;
+
   @media (min-width: $tablet-width) {
     width: 478px;
     height: 480px;

@@ -2,9 +2,15 @@
 }
 
 .advantages__wrapper {
+  padding-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
 }
 
 .advantages__heading {
+  margin: 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
