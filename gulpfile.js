@@ -62,7 +62,7 @@ const webper = () => {
 // SVG
 const svger = () => {
   return gulp
-    .src(["source/img/**/*.svg", "!source/img/sprites/*.svg"])
+    .src(["source/img/**/*.svg", "!source/img/sprite/*.svg"])
     .pipe(svgo())
     .pipe(gulp.dest("build/img"));
 };
@@ -70,10 +70,11 @@ const svger = () => {
 // Sprite
 const spriter = () => {
   return gulp
-    .src(["source/img/sprites/*.svg"])
+    .src(["source/img/sprite/*.svg"])
     .pipe(spriting())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img/sprites"));
+    .pipe(gulp.dest("build/img/sprite"))
+    .pipe(gulp.dest("source/img/sprite"));
 };
 
 // Copier
@@ -116,12 +117,16 @@ export const build = gulp.series(
   clean,
   copy,
   scripts,
-  // images,
-  // webper,
-  // svger,
+  images,
+  webper,
+  svger,
   spriter,
   styles,
   htmlmini
 );
 
-export default gulp.series(build, server, watcher);
+export default gulp.series(
+  gulp.series(clean, copy, scripts, spriter, styles, htmlmini),
+  server,
+  watcher
+);
