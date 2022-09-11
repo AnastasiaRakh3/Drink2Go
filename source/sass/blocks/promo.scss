@@ -226,14 +226,6 @@
 .promo__button {
   margin-left: auto;
   padding: 8px 20px;
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: $color-base-first;
-  background-color: $color-base-primary;
-  border: none;
-  border-radius: 4px;
 }
 
 .promo__slider-buttons {
@@ -272,16 +264,20 @@
   }
 }
 
-.promo__slider-button--current .promo__slider-block {
-  background-color: $color-base-primary;
-}
-
 .promo__slider-button:hover .promo__slider-block,
 .promo__slider-button:focus .promo__slider-block {
   background-color: $color-primary-opacity;
 }
 
 .promo__slider-button:active .promo__slider-block {
+  background-color: $color-base-primary;
+}
+
+.promo__slider-button--current .promo__slider-block {
+  background-color: $color-base-primary;
+}
+
+.promo__slider-button--current:focus .promo__slider-block {
   background-color: $color-base-primary;
 }
 

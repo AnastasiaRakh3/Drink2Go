@@ -1,0 +1,24 @@
+.button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-base-first;
+  background-color: $color-base-primary;
+  border: none;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $color-base-third;
+  }
+}
