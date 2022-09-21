@@ -92,6 +92,11 @@ const clean = () => {
   return del("build");
 };
 
+// CleanSpriter
+const cleanSpriter = () => {
+  return del("source/img/sprite/sprite.svg");
+};
+
 // Server
 const server = (done) => {
   browser.init({
@@ -115,6 +120,7 @@ const watcher = () => {
 // Building
 export const build = gulp.series(
   clean,
+  cleanSpriter,
   copy,
   scripts,
   images,
@@ -126,7 +132,7 @@ export const build = gulp.series(
 );
 
 export default gulp.series(
-  gulp.series(clean, copy, scripts, spriter, styles, htmlmini),
+  gulp.series(clean, cleanSpriter, copy, scripts, spriter, styles, htmlmini),
   server,
   watcher
 );

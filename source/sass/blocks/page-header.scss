@@ -3,8 +3,8 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0 20px;
   }
 
@@ -18,20 +18,14 @@
   position: absolute;
   top: 12px;
   left: 20px;
-  width: 36px;
-  height: 36px;
-  background-color: rgb(68, 25, 25);
 
   @media (min-width: $tablet-width) {
     position: static;
-    width: 82px;
-    height: 36px;
     margin-top: 22px;
     margin-right: 67px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 170px;
     margin-right: 20px;
   }
 }
@@ -42,7 +36,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     width: 126px;
-    margin: 24px 162px 24px 0;
+    margin: 24px auto 24px 0;
     font-size: 12px;
     line-height: 16px;
   }
@@ -52,10 +46,6 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-
-  @media (min-width: $desktop-width) {
-    margin-left: auto;
-  }
 }
 
 .page-header__nav-toggle {
@@ -66,13 +56,13 @@
   height: 60px;
   padding: 0;
   border: none;
-  background-color: rgb(217, 193, 164);
+  background-color: transparent;
 
-  @media (min-width: $tablet-width) {
-    display: none;
+  &:active {
+    background-color: $color-base-secondary;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 
@@ -84,8 +74,8 @@
     left: 22px;
     width: 16px;
     height: 2px;
-    background-color: #333333;
-    box-shadow: 0 6px 0 0 #333333, 0 12px 0 0 #333333;
+    background-color: $color-base-second;
+    box-shadow: 0 5px 0 0 $color-base-second, 0 10px 0 0 $color-base-second;
     transition: all ease 0.4s;
   }
 }
