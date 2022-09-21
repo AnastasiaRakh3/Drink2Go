@@ -1,0 +1,32 @@
+.goods {
+  @include list-reset;
+}
+
+.goods__item {
+  background-color: #ffffff;
+}
+
+.goods__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.goods__description {
+  font-size: 14px;
+}
+
+.goods__buy {
+}
+
+.goods__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.goods__btn {
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #7859cf;
+}
