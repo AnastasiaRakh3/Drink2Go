@@ -1,18 +1,13 @@
 .map {
-}
-
-.map iframe {
-  width: 320px;
-  height: 320px;
-  border: 0;
+  width: 100%;
+  height: 420px;
 
   @media (min-width: $tablet-width) {
-    width: 478px;
     height: 480px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
     height: 540px;
   }
 }
+
